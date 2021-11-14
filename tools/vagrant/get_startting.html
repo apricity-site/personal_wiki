@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Vagrant 入门 | APRICITY</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="个人知识库">
+    
+    <link rel="preload" href="/personal_wiki/assets/css/0.styles.65ccb39f.css" as="style"><link rel="preload" href="/personal_wiki/assets/js/app.d60e7411.js" as="script"><link rel="preload" href="/personal_wiki/assets/js/2.487a0e24.js" as="script"><link rel="preload" href="/personal_wiki/assets/js/20.f2217f22.js" as="script"><link rel="prefetch" href="/personal_wiki/assets/js/10.83cc57ab.js"><link rel="prefetch" href="/personal_wiki/assets/js/11.342c6dde.js"><link rel="prefetch" href="/personal_wiki/assets/js/12.fb7b3bce.js"><link rel="prefetch" href="/personal_wiki/assets/js/13.ad4f0c53.js"><link rel="prefetch" href="/personal_wiki/assets/js/14.1e7cab5b.js"><link rel="prefetch" href="/personal_wiki/assets/js/15.cbdbc27a.js"><link rel="prefetch" href="/personal_wiki/assets/js/16.1ba1c252.js"><link rel="prefetch" href="/personal_wiki/assets/js/17.88091353.js"><link rel="prefetch" href="/personal_wiki/assets/js/18.3285ccaa.js"><link rel="prefetch" href="/personal_wiki/assets/js/19.9da75aa9.js"><link rel="prefetch" href="/personal_wiki/assets/js/3.131c70a8.js"><link rel="prefetch" href="/personal_wiki/assets/js/4.b5c5d85a.js"><link rel="prefetch" href="/personal_wiki/assets/js/5.aedbb9bc.js"><link rel="prefetch" href="/personal_wiki/assets/js/6.7dd3e1f3.js"><link rel="prefetch" href="/personal_wiki/assets/js/7.c597da36.js"><link rel="prefetch" href="/personal_wiki/assets/js/8.518a8b15.js"><link rel="prefetch" href="/personal_wiki/assets/js/9.8d4d5d94.js">
+    <link rel="stylesheet" href="/personal_wiki/assets/css/0.styles.65ccb39f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/personal_wiki/" class="home-link router-link-active"><!----> <span class="site-name">APRICITY</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/personal_wiki/book/rabbitmq-in-action-guide/" class="nav-link">
+  rabbitmq实战指南
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程笔记" class="dropdown-title"><span class="title">课程笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程笔记" class="mobile-dropdown-title"><span class="title">课程笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/personal_wiki/course/ci-cd/" class="nav-link">
+  CI/CD
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/personal_wiki/tools/vagrant/get_startting.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  vagrant
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书笔记" class="dropdown-title"><span class="title">读书笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="读书笔记" class="mobile-dropdown-title"><span class="title">读书笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/personal_wiki/book/rabbitmq-in-action-guide/" class="nav-link">
+  rabbitmq实战指南
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="课程笔记" class="dropdown-title"><span class="title">课程笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="课程笔记" class="mobile-dropdown-title"><span class="title">课程笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/personal_wiki/course/ci-cd/" class="nav-link">
+  CI/CD
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具" class="mobile-dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/personal_wiki/tools/vagrant/get_startting.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  vagrant
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vagrant 入门</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/personal_wiki/tools/vagrant/get_startting.html#安装软件" class="sidebar-link">安装软件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#安装-virtualbox" class="sidebar-link">安装 VirtualBox</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#安装-vagrant" class="sidebar-link">安装 Vagrant</a></li></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#配置虚机存放位置" class="sidebar-link">配置虚机存放位置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#配置-virtualbox" class="sidebar-link">配置 VirtualBox</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#配置-vagrant" class="sidebar-link">配置 Vagrant</a></li></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#下载虚机镜像" class="sidebar-link">下载虚机镜像</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#centos" class="sidebar-link">CentOS</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#ubuntu" class="sidebar-link">Ubuntu</a></li></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#添加-box" class="sidebar-link">添加 box</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#vagrant-基本操作" class="sidebar-link">Vagrant 基本操作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#新建虚机" class="sidebar-link">新建虚机</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#启动虚机" class="sidebar-link">启动虚机</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#查看虚机状态" class="sidebar-link">查看虚机状态</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#连接虚机" class="sidebar-link">连接虚机</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#停止虚机" class="sidebar-link">停止虚机</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#暂停虚机" class="sidebar-link">暂停虚机</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#恢复虚机" class="sidebar-link">恢复虚机</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#重载虚机" class="sidebar-link">重载虚机</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#删除虚机" class="sidebar-link">删除虚机</a></li></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#初识-vagrantfile" class="sidebar-link">初识 Vagrantfile</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#自定义配置-vagrantfile" class="sidebar-link">自定义配置 Vagrantfile</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#配置端口转发" class="sidebar-link">配置端口转发</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#配置私有网络" class="sidebar-link">配置私有网络</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#配置公共网络" class="sidebar-link">配置公共网络</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#配置同步文件夹" class="sidebar-link">配置同步文件夹</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#更改虚机规格" class="sidebar-link">更改虚机规格</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#provision" class="sidebar-link">Provision</a></li></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#定制带客户机增强的-box" class="sidebar-link">定制带客户机增强的 box</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#下载-guest-addition" class="sidebar-link">下载 Guest Addition</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#安装-guest-addition" class="sidebar-link">安装 Guest Addition</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#测试" class="sidebar-link">测试</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#清理磁盘" class="sidebar-link">清理磁盘</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#打包为-box" class="sidebar-link">打包为 box</a></li><li class="sidebar-sub-header"><a href="/personal_wiki/tools/vagrant/get_startting.html#添加到-vagrant-中" class="sidebar-link">添加到 vagrant 中</a></li></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#使用-ssh-客户端" class="sidebar-link">使用 SSH 客户端</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/personal_wiki/tools/vagrant/get_startting.html#使用模板文件" class="sidebar-link">使用模板文件</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="vagrant-入门"><a href="#vagrant-入门" class="header-anchor">#</a> Vagrant 入门</h1> <h2 id="安装软件"><a href="#安装软件" class="header-anchor">#</a> 安装软件</h2> <h3 id="安装-virtualbox"><a href="#安装-virtualbox" class="header-anchor">#</a> 安装 VirtualBox</h3> <p><a href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">VirtualBox官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>下载<a href="https://www.virtualbox.org/wiki/VirtualBox" target="_blank" rel="noopener noreferrer">VirtualBox<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>  platform packages和<a href="https://www.virtualbox.org/wiki/VirtualBox" target="_blank" rel="noopener noreferrer">VirtualBox<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> Extension Pack</p> <p>在安装完主程序后，直接双击扩展包文件即可安装扩展包。</p> <h3 id="安装-vagrant"><a href="#安装-vagrant" class="header-anchor">#</a> 安装 Vagrant</h3> <p>在 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/" target="_blank" rel="noopener noreferrer">Vagant 网站<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>下载最新的版本，根据自己的操作系统选择对应的版本下载即可。</p> <p>安装完毕后，通过命令行执行 <code>vagrant version</code> 检查是否安装成功：</p> <div class="language-text extra-class"><pre class="language-text"><code>&gt; vagrant version
+</code></pre></div><h2 id="配置虚机存放位置"><a href="#配置虚机存放位置" class="header-anchor">#</a> 配置虚机存放位置</h2> <p>创建虚拟机会占用较多的磁盘空间，在 Windows 系统下默认的虚机创建位置是在 C 盘，所以最好配置到其它地方。</p> <h3 id="配置-virtualbox"><a href="#配置-virtualbox" class="header-anchor">#</a> 配置 VirtualBox</h3> <p>启动 VirtualBox 后，通过菜单 <code>管理</code> -&gt; <code>全局设定</code>，或者按下快捷键 <code>Ctrl + g</code>，在全局设定对话框中，修改 <code>默认虚拟电脑位置</code>，指定一个容量较大的磁盘。</p> <h3 id="配置-vagrant"><a href="#配置-vagrant" class="header-anchor">#</a> 配置 Vagrant</h3> <p>通过 Vagrant 创建虚机需要先导入镜像文件，也就是 <code>box</code>，它们默认存储的位置在用户目录下的 <code>.vagrant.d</code> 目录下，对于 Windows 系统来说，就是 <code>C:\Users\用户名\.vagrant.d</code>。</p> <p>如果后续可能会用到较多镜像，或者你的 C 盘空间比较紧缺，可以通过设置环境变量 <code>VAGRANT_HOME</code> 来设置该目录。</p> <p>在 Windows 系统中，可以这样操作：新建系统环境变量，环境变量名为 <code>VAGRANT_HOME</code>，变量值为 <code>E:\VirtualBox\.vagrant.d</code></p> <blockquote><p><strong>注意</strong>， <code>.vagrant.d</code> 目录名称不是必须的，但是建议保持一致，这样一眼看上去就能知道这个目录是做什么用处的了。</p></blockquote> <h2 id="下载虚机镜像"><a href="#下载虚机镜像" class="header-anchor">#</a> 下载虚机镜像</h2> <p>使用 Vagrant 创建虚机时，需要指定一个镜像，也就是 <code>box</code>。开始这个 box 不存在，所以 Vagrant 会先从网上下载，然后缓存在本地目录中。</p> <p>Vagrant 有一个<a href="https://link.zhihu.com/?target=https%3A//app.vagrantup.com/boxes/search" target="_blank" rel="noopener noreferrer">镜像网站<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，里面列出了都有哪些镜像可以用，并且提供了操作文档。</p> <p>但是这里默认下载往往会比较慢，所以下面我会介绍如何在其它地方下载到基础镜像，然后按照自己的需要重置。如果网速较好，下载顺利的朋友可以选择性地跳过部分内容。</p> <p>两个 Linux 操作系统镜像的下载地址：</p> <h3 id="centos"><a href="#centos" class="header-anchor">#</a> CentOS</h3> <p>CentOS 的镜像下载网站是： <a href="https://link.zhihu.com/?target=http%3A//cloud.centos.org/centos/" target="_blank" rel="noopener noreferrer">http://cloud.centos.org/centos/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>在其中选择自己想要下载的版本，列表中有一个 <code>vagrant</code> 目录，里面是专门为 vagrant 构建的镜像。选择其中的 <code>.box</code> 后缀的文件下载即可。这里可以使用下载工具，以较快的速度下载下来。</p> <h3 id="ubuntu"><a href="#ubuntu" class="header-anchor">#</a> Ubuntu</h3> <p>Ubuntu 的镜像下载网站是： <a href="https://link.zhihu.com/?target=http%3A//cloud-images.ubuntu.com/" target="_blank" rel="noopener noreferrer">http://cloud-images.ubuntu.com/<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>同样先选择想要的版本，然后选择针对 vagrant 的 <code>.box</code> 文件即可。</p> <p>如果这里官网的速度较慢，还可以从 <a href="https://link.zhihu.com/?target=https%3A//mirror.tuna.tsinghua.edu.cn/ubuntu-cloud-images/" target="_blank" rel="noopener noreferrer">清华大学的镜像站<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 下载。</p> <h2 id="添加-box"><a href="#添加-box" class="header-anchor">#</a> 添加 box</h2> <p>接下来我们需要将下载后的 <code>.box</code> 文件添加到 vagrant 中。</p> <p>Vagrant 没有 GUI，只能从命令行访问，先启动一个命令行，然后执行:</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant box list
+There are no installed boxes! Use `vagrant box add` to add some.
+</code></pre></div><p>提示现在还没有 box。如果这是第一次运行，此时 <code>VAGRANT_HOME</code> 目录下会自动生成若干的文件和文件夹，其中有一个 <code>boxes</code> 文件夹，这就是要存放 box 文件的地方。</p> <p>执行 <code>vagrant box add</code> 命令添加 box:</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant box add e:\Downloads\CentOS-7.box --name centos-7
+==&gt; box: Box file was not detected as metadata. Adding it directly...
+==&gt; box: Adding box 'centos-7' (v0) for provider:
+    box: Unpacking necessary files from: file:///e:/Downloads/CentOS-7.box
+    box:
+==&gt; box: Successfully added box 'centos-7' (v0) for 'virtualbox'!
+</code></pre></div><p>命令后面跟着的是下载的文件路径，并且通过 <code>--name centos-7</code> 为这个 box 指定一个名字。</p> <p>再次查询，可以看到有了一个 box：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant box list
+centos-7 (virtualbox, 0)
+</code></pre></div><h2 id="vagrant-基本操作"><a href="#vagrant-基本操作" class="header-anchor">#</a> Vagrant 基本操作</h2> <h3 id="新建虚机"><a href="#新建虚机" class="header-anchor">#</a> 新建虚机</h3> <p>创建一个目录，先执行 <code>vagrant init</code>：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ mkdir demo
+$ cd demo
+$ vagrant init centos-7
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+</code></pre></div><p>其中的 <code>centos-7</code> 就是我们要使用的 <code>box</code> 名字。</p> <p>这个命令只是为我们生成一个 <code>Vagrantfile</code>，所以，这里的名字没指定或者写错了都没关系，后面会介绍如何编辑这个 <code>Vagrantfile</code> 来修改。</p> <h3 id="启动虚机"><a href="#启动虚机" class="header-anchor">#</a> 启动虚机</h3> <p>我们等会再来细看这个文件，现在直接按照提示执行 <code>vagrant up</code>：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==&gt; default: Importing base box 'centos-7'...
+==&gt; default: Matching MAC address for NAT networking...
+==&gt; default: Setting the name of the VM: demo_default_1588406874156_65036
+==&gt; default: Clearing any previously set network interfaces...
+==&gt; default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==&gt; default: Forwarding ports...
+    default: 22 (guest) =&gt; 2222 (host) (adapter 1)
+==&gt; default: Booting VM...
+==&gt; default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: vagrant
+    default: SSH auth method: private key
+</code></pre></div><p>正常的情况下，不到一分钟应该就能启动成功了。</p> <p>注意到这里包含的信息：</p> <ul><li>虚机名称：<code>demo_default_1588406874156_65036</code>（想改？最后有提）</li> <li>网卡：<code>Adapter 1: nat</code>，第一块网卡，NAT 模式，这是固定的</li> <li>端口转发：<code>22 (guest) =&gt; 2222 (host) (adapter 1)</code>，把虚机的 22 端口，映射到宿主机的 2222 端口上，这样就可以通过 <code>127.0.0.1:2222</code> 访问虚拟机了</li> <li>SSH 用户名：<code>vagrant</code>，这里使用 <code>private key</code> 登录</li></ul> <blockquote><p>密码也是 <code>vagrant</code>，但是密码方式仅供直接登录，是不能通过 SSH 登录的。</p></blockquote> <h3 id="查看虚机状态"><a href="#查看虚机状态" class="header-anchor">#</a> 查看虚机状态</h3> <p>执行下面的命令可以查看虚机的状态：</p> <div class="language-text extra-class"><pre class="language-text"><code>vagrant status
+
+Current machine states:
+
+default                   running (virtualbox)
+
+The VM is running. To stop this VM, you can run `vagrant halt` to
+shut it down forcefully, or you can run `vagrant suspend` to simply
+suspend the virtual machine. In either case, to restart it again,
+simply run `vagrant up`.
+</code></pre></div><p>该命令还提示了如何操作虚机</p> <h3 id="连接虚机"><a href="#连接虚机" class="header-anchor">#</a> 连接虚机</h3> <p>如果启动没问题，接下来执行 <code>vagrant ssh</code> 就能以 <code>vagrant</code> 用户直接登入虚机中。</p> <p><code>root</code> 用户没有默认密码，也不能直接登录。需要 root 权限的命令可以通过在命令前添加 <code>sudo</code> 来执行，也可以执行 <code>sudo -i</code> 直接切换到 <code>root</code> 用户。</p> <p>这时候打开 VirtualBox 程序，可以看到自动创建的虚机</p> <p>我们也可以在 VirtualBox 的终端上登录系统，默认的登录用户名和密码都是 <code>vagrant</code>。</p> <p>当然还可以使用其它的 SSH 连接工具例如 XShell，SecureCRT 连接，但是这里默认网卡使用的是 NAT 模式，没有指定 IP，实际应用并不方便，我们在后面介绍网络配置固定ip。</p> <h3 id="停止虚机"><a href="#停止虚机" class="header-anchor">#</a> 停止虚机</h3> <p>执行下面的命令可以关闭虚机：</p> <div class="language-text extra-class"><pre class="language-text"><code>vagrant halt
+</code></pre></div><p>直接在 VirtualBox 上关闭虚机，或者直接在虚机内部执行 <code>poweroff</code> 命令也都是可以的。</p> <h3 id="暂停虚机"><a href="#暂停虚机" class="header-anchor">#</a> 暂停虚机</h3> <p>执行下面的命令可以暂停虚机：</p> <div class="language-text extra-class"><pre class="language-text"><code>vagrant suspend
+</code></pre></div><h3 id="恢复虚机"><a href="#恢复虚机" class="header-anchor">#</a> 恢复虚机</h3> <p>执行下面的命令把暂停状态的虚机恢复运行：</p> <div class="language-text extra-class"><pre class="language-text"><code>vagrant resume
+</code></pre></div><p><strong>注意：</strong> 不管虚机是关闭还是暂停状态，甚至是 error 状态，都可以执行 <code>vagrant up</code> 来让虚机恢复运行。</p> <h3 id="重载虚机"><a href="#重载虚机" class="header-anchor">#</a> 重载虚机</h3> <p>执行下面的命令会重启虚机，并且重新加载 <code>Vagrantfile</code> 中的配置信息：</p> <div class="language-text extra-class"><pre class="language-text"><code>vagrant reload
+</code></pre></div><h3 id="删除虚机"><a href="#删除虚机" class="header-anchor">#</a> 删除虚机</h3> <p>最后，执行下面的命令可以彻底删除虚机，包括整个虚机文件：</p> <div class="language-text extra-class"><pre class="language-text"><code>vagrant destroy
+</code></pre></div><p><strong>注意：</strong> 在当前这个小例子中，上面所有的 <code>vagrant</code> 命令都需要在 <code>Vagrantfile</code> 所在的目录下执行。</p> <h2 id="初识-vagrantfile"><a href="#初识-vagrantfile" class="header-anchor">#</a> 初识 Vagrantfile</h2> <p>先来认识一下默认的 <code>Vagrantfile</code> 文件，使用带语法高亮的文本编辑器（例如 VSCode） 打开:</p> <div class="language-ruby extra-class"><pre class="language-ruby"><code><span class="token comment"># -*- mode: ruby -*-</span>
+<span class="token comment"># vi: set ft=ruby :</span>
+
+<span class="token comment"># All Vagrant configuration is done below. The &quot;2&quot; in Vagrant.configure</span>
+<span class="token comment"># configures the configuration version (we support older styles for</span>
+<span class="token comment"># backwards compatibility). Please don't change it unless you know what</span>
+<span class="token comment"># you're doing.</span>
+<span class="token constant">Vagrant</span><span class="token punctuation">.</span>configure<span class="token punctuation">(</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">)</span> <span class="token keyword">do</span> <span class="token operator">|</span>config<span class="token operator">|</span>
+  <span class="token comment"># The most common configuration options are documented and commented below.</span>
+  <span class="token comment"># For a complete reference, please see the online documentation at</span>
+  <span class="token comment"># https://docs.vagrantup.com.</span>
+
+  <span class="token comment"># Every Vagrant development environment requires a box. You can search for</span>
+  <span class="token comment"># boxes at https://vagrantcloud.com/search.</span>
+  config<span class="token punctuation">.</span>vm<span class="token punctuation">.</span>box <span class="token operator">=</span> <span class="token string">&quot;centos-7&quot;</span>
+
+  <span class="token comment"># Disable automatic box update checking. If you disable this, then</span>
+  <span class="token comment"># boxes will only be checked for updates when the user runs</span>
+  <span class="token comment"># `vagrant box outdated`. This is not recommended.</span>
+  <span class="token comment"># config.vm.box_check_update = false</span>
+
+  <span class="token comment"># Create a forwarded port mapping which allows access to a specific port</span>
+  <span class="token comment"># within the machine from a port on the host machine. In the example below,</span>
+  <span class="token comment"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span>
+  <span class="token comment"># NOTE: This will enable public access to the opened port</span>
+  <span class="token comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span>
+
+  <span class="token comment"># Create a forwarded port mapping which allows access to a specific port</span>
+  <span class="token comment"># within the machine from a port on the host machine and only allow access</span>
+  <span class="token comment"># via 127.0.0.1 to disable public access</span>
+  <span class="token comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span>
+
+  <span class="token comment"># Create a private network, which allows host-only access to the machine</span>
+  <span class="token comment"># using a specific IP.</span>
+  <span class="token comment"># config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;</span>
+
+  <span class="token comment"># Create a public network, which generally matched to bridged network.</span>
+  <span class="token comment"># Bridged networks make the machine appear as another physical device on</span>
+  <span class="token comment"># your network.</span>
+  <span class="token comment"># config.vm.network &quot;public_network&quot;</span>
+
+  <span class="token comment"># Share an additional folder to the guest VM. The first argument is</span>
+  <span class="token comment"># the path on the host to the actual folder. The second argument is</span>
+  <span class="token comment"># the path on the guest to mount the folder. And the optional third</span>
+  <span class="token comment"># argument is a set of non-required options.</span>
+  <span class="token comment"># config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;</span>
+
+  <span class="token comment"># Provider-specific configuration so you can fine-tune various</span>
+  <span class="token comment"># backing providers for Vagrant. These expose provider-specific options.</span>
+  <span class="token comment"># Example for VirtualBox:</span>
+  <span class="token comment">#</span>
+  <span class="token comment"># config.vm.provider &quot;virtualbox&quot; do |vb|</span>
+  <span class="token comment">#   # Display the VirtualBox GUI when booting the machine</span>
+  <span class="token comment">#   vb.gui = true</span>
+  <span class="token comment">#</span>
+  <span class="token comment">#   # Customize the amount of memory on the VM:</span>
+  <span class="token comment">#   vb.memory = &quot;1024&quot;</span>
+  <span class="token comment"># end</span>
+  <span class="token comment">#</span>
+  <span class="token comment"># View the documentation for the provider you are using for more</span>
+  <span class="token comment"># information on available options.</span>
+
+  <span class="token comment"># Enable provisioning with a shell script. Additional provisioners such as</span>
+  <span class="token comment"># Ansible, Chef, Docker, Puppet and Salt are also available. Please see the</span>
+  <span class="token comment"># documentation for more information about their specific syntax and use.</span>
+  <span class="token comment"># config.vm.provision &quot;shell&quot;, inline: &lt;&lt;-SHELL</span>
+  <span class="token comment">#   apt-get update</span>
+  <span class="token comment">#   apt-get install -y apache2</span>
+  <span class="token comment"># SHELL</span>
+<span class="token keyword">end</span>
+</code></pre></div><p>这是一个 Ruby 语法的文件，因为 Vagrant 就是用 Ruby 编写的。如果编辑器没有语法高亮可以手动设置文件类型为 Ruby。</p> <p>这个缺省文件内容几乎都是注释，提示有哪些配置项可以修改，我们不需要去学 Ruby 编程也可以照葫芦画瓢的完成基本的配置。</p> <blockquote><p>当然，如果会 Ruby 编程的可以在此实现更高级的作用，但是绝大多数人用不着。</p></blockquote> <p>刨除注释，这个文件的实际生效内容实际只有 3 行:</p> <div class="language-ruby extra-class"><pre class="language-ruby"><code><span class="token constant">Vagrant</span><span class="token punctuation">.</span>configure<span class="token punctuation">(</span><span class="token string">&quot;2&quot;</span><span class="token punctuation">)</span> <span class="token keyword">do</span> <span class="token operator">|</span>config<span class="token operator">|</span>
+  config<span class="token punctuation">.</span>vm<span class="token punctuation">.</span>box <span class="token operator">=</span> <span class="token string">&quot;centos-7&quot;</span>
+<span class="token keyword">end</span>
+</code></pre></div><p>首尾两行组成一个代码块结构，不要去动它，除非你知道自己在干什么。我们平常只需要编辑这其中的配置项。</p> <p>这里的 <code>config.vm.box</code> 对应的就是虚机的镜像，也就是 box 文件，这是唯一必填的配置项。</p> <p>特别提醒，<code>Vagrantfile</code> 文件名是固定的写法，大小写也要完全一样，修改了就不认识了。</p> <h2 id="自定义配置-vagrantfile"><a href="#自定义配置-vagrantfile" class="header-anchor">#</a> 自定义配置 Vagrantfile</h2> <p>下面我将针对这份默认的 <code>Vagrantfile</code> 内容，逐个讲解其中的配置含义和如何根据实际情况修改。</p> <h3 id="配置端口转发"><a href="#配置端口转发" class="header-anchor">#</a> 配置端口转发</h3> <p>端口转发（Port forward）又叫端口映射，就是把虚机的某个端口，映射到宿主机的端口上。这样就能在宿主机上访问到虚拟机中的服务。</p> <p>例如启动虚机时，默认的 <code>22 (guest) =&gt; 2222 (host) (adapter 1)</code> 就是把虚机的 SSH 服务端口（<code>22</code>）映射到宿主机的 <code>2222</code> 端口，这样直接在宿主机通过 ssh 客户端访问 <code>127.0.0.1:2222</code> 端口就等价于访问虚拟机的 <code>22</code> 端口。</p> <div class="language-ruby extra-class"><pre class="language-ruby"><code>  <span class="token comment"># Create a forwarded port mapping which allows access to a specific port</span>
+  <span class="token comment"># within the machine from a port on the host machine. In the example below,</span>
+  <span class="token comment"># accessing &quot;localhost:8080&quot; will access port 80 on the guest machine.</span>
+  <span class="token comment"># NOTE: This will enable public access to the opened port</span>
+  <span class="token comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080</span>
+
+  <span class="token comment"># Create a forwarded port mapping which allows access to a specific port</span>
+  <span class="token comment"># within the machine from a port on the host machine and only allow access</span>
+  <span class="token comment"># via 127.0.0.1 to disable public access</span>
+  <span class="token comment"># config.vm.network &quot;forwarded_port&quot;, guest: 80, host: 8080, host_ip: &quot;127.0.0.1&quot;</span>
+</code></pre></div><p>实际上设置端口转发这个功能并不实用，一个很明显的问题就是如果启动多个虚机，很容易就出现宿主机上端口冲突的问题。即使没有端口冲突，使用起来也不方便，我个人不推荐使用的，可以把这部分配置直接删掉。直接使用下面的私有网络。</p> <p>这个功能是虚拟机软件提供的，可以在虚机的网卡设置中展开高级选项，找到端口转发相关配置</p> <p>注意，默认的 SSH 端口映射在这里没法直接修改。如果2222 端口出现莫名问题，如果想要把 22 端口转发到其它端口如 22222，直接添加下面这样的配置是<strong>没用</strong>的：</p> <div class="language-text extra-class"><pre class="language-text"><code>  config.vm.network &quot;forwarded_port&quot;, guest: 22, host: 22222
+</code></pre></div><p>它会在原来的基础上新加一个端口转发规则，而不是替代原来的，必须要先强制关闭掉默认的那条规则:</p> <div class="language-text extra-class"><pre class="language-text"><code>  config.vm.network &quot;forwarded_port&quot;, guest: 22, host: 2222, id: &quot;ssh&quot;, disabled: &quot;true&quot;
+  config.vm.network &quot;forwarded_port&quot;, guest: 22, host: 22222
+</code></pre></div><h3 id="配置私有网络"><a href="#配置私有网络" class="header-anchor">#</a> 配置私有网络</h3> <p>下面这段配置用来配置私有网络，实际上对应的是 VirtualBox 的主机网络，也就是 HostOnly 网络。</p> <div class="language-text extra-class"><pre class="language-text"><code>  # Create a private network, which allows host-only access to the machine
+  # using a specific IP.
+  # config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;
+</code></pre></div><p>取消注释最下面一行，就可以为虚机设置指定的私有网络地址：</p> <div class="language-text extra-class"><pre class="language-text"><code>  config.vm.network &quot;private_network&quot;, ip: &quot;192.168.33.10&quot;
+</code></pre></div><p>如果这个网段的主机网络在 VirtualBox 中不存在，Vagrant 会在启动虚机时自动创建。所以，如果你想要利用已有的网络，请查看现有<strong>主机网络</strong>配置：</p> <p>最好这个网络也<strong>不要启用 DHCP</strong>，完全由自己来分配地址，这样更加清楚。</p> <div class="language-text extra-class"><pre class="language-text"><code>  config.vm.network &quot;private_network&quot;, ip: &quot;192.168.56.10&quot;
+</code></pre></div><p>修改完成后，执行 <code>vagrant reload</code> 命令重建虚机，就能看到多出来的网卡了。</p> <p>私有网络实际也可以直接使用 DHCP，但是并不推荐：</p> <div class="language-text extra-class"><pre class="language-text"><code>  config.vm.network &quot;private_network&quot;, type: &quot;dhcp&quot;
+</code></pre></div><p><strong>如果<code>reload</code>后报错网卡找不到，需要先禁用网卡再启用</strong></p> <h3 id="配置公共网络"><a href="#配置公共网络" class="header-anchor">#</a> 配置公共网络</h3> <p>下面这条配置用来配置公共网络：</p> <div class="language-text extra-class"><pre class="language-text"><code>  # Create a public network, which generally matched to bridged network.
+  # Bridged networks make the machine appear as another physical device on
+  # your network.
+  # config.vm.network &quot;public_network&quot;
+</code></pre></div><p>正如注释所说，这里通常对应的就是桥接网络。实际开发场景下，我们极少会需要把虚机暴露到公共网络上，这样既不安全，也没有必要。</p> <p>默认所起的第 1 个 NAT 网络已经保证了虚机可以上互联网，而私有网络保证了宿主机和虚机，以及虚机和虚机之间的通信。如果有对外暴露服务的需求，还可以使用端口转发。我实在想不出什么情况下是必须要用桥接网络的。</p> <p>所以这部分配置可以直接删除，如确有使用的，可以参考 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/docs/networking/public_network.html" target="_blank" rel="noopener noreferrer">官方文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <h3 id="配置同步文件夹"><a href="#配置同步文件夹" class="header-anchor">#</a> 配置同步文件夹</h3> <p>下面的配置项用来配置同步文件夹:</p> <div class="language-text extra-class"><pre class="language-text"><code>  # Share an additional folder to the guest VM. The first argument is
+  # the path on the host to the actual folder. The second argument is
+  # the path on the guest to mount the folder. And the optional third
+  # argument is a set of non-required options.
+  # config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;
+</code></pre></div><p>在启动虚机的时候，我们可以看到这样的提示：</p> <div class="language-text extra-class"><pre class="language-text"><code>==&gt; default: Machine booted and ready!
+==&gt; default: Checking for guest additions in VM...
+    default: No guest additions were detected on the base box for this VM! Guest
+    default: additions are required for forwarded ports, shared folders, host only
+    default: networking, and more. If SSH fails on this machine, please install
+    default: the guest additions and repackage the box to continue.
+    default:
+    default: This is not an error message; everything may continue to work properly,
+    default: in which case you may ignore this message.
+==&gt; default: Configuring and enabling network interfaces...
+==&gt; default: Rsyncing folder: /cygdrive/c/Users/Davy/demo/ =&gt; /vagrant
+</code></pre></div><p>先注意最后一行的提示：<code>Rsyncing folder: /cygdrive/c/Users/Davy/demo/ =&gt; /vagrant</code></p> <ul><li><code>/cygdrive/c/Users/Davy/demo/</code> 这是宿主机的本地目录，也就是 <code>Vagrantfile</code> 所在的目录。</li> <li><code>/vagrant</code> 是虚拟机内部的路径</li> <li><code>Rsyncing</code> 表示同步的方式是 Rsync</li></ul> <blockquote><p>宿主机目录中出现 <code>/cygdrive</code> 是因为 Vagrant 程序用到了 Cygwin，它是在 Windows 系统中兼容 Linux/POSIX 的模拟层。可以把 <code>/cygdrive</code> 看成是虚拟的根目录。</p></blockquote> <p>同步文件操作步骤：</p> <ul><li>在 <code>demo</code> 目录下创建一些文件，例如 <code>hello.py</code></li> <li>执行 <code>vagrant reload</code>，重启虚机</li> <li>在虚机启动完成后登录到虚机内，操作如下：</li></ul> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant ssh
+Last login: Sat May  2 16:25:00 2020 from 10.0.2.2
+[vagrant@localhost ~]$ cd /vagrant/
+[vagrant@localhost vagrant]$ ls
+hello.py  Vagrantfile
+[vagrant@localhost vagrant]$ python hello.py
+helloworld
+</code></pre></div><p>这种同步方式在大多数情况下都能提供便利，不过也有不足之处：</p> <ul><li>同步是一次性的，即只有启动虚机的时候执行，也就是说改了代码必须要重启一次虚机</li> <li>单向的，即只能从宿主机同步到虚拟机，也就是说在虚机内的改动不会同步到外面</li> <li>需要拷贝文件，如果要同步的文件数量较多，会占用更多的磁盘空间</li></ul> <p>让我们按照默认配置的提示来新加一条同步文件夹配置试试：</p> <div class="language-text extra-class"><pre class="language-text"><code>config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;
+</code></pre></div><p>注意，别忘了先在宿主机上创建 <code>data</code> 文件夹，重启虚机可能看到下面的错误提示：</p> <div class="language-text extra-class"><pre class="language-text"><code>==&gt; default: Rsyncing folder: /cygdrive/c/Users/Davy/demo/ =&gt; /vagrant
+==&gt; default: Mounting shared folders...
+    default: /vagrant_data =&gt; C:/Users/Davy/data
+Vagrant was unable to mount VirtualBox shared folders. This is usually
+because the filesystem &quot;vboxsf&quot; is not available. This filesystem is
+made available via the VirtualBox Guest Additions and kernel module.
+Please verify that these guest additions are properly installed in the
+guest. This is not a bug in Vagrant and is usually caused by a faulty
+Vagrant box. For context, the command attempted was:
+
+mount -t vboxsf -o uid=1000,gid=1000 vagrant_data /vagrant_data
+
+The error output from the command was:
+
+mount: unknown filesystem type 'vboxsf'
+</code></pre></div><p>这是因为 Vagrant 提供了多种同步方式，在使用 VirtualBox 的时候，缺省同步类型是 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/docs/synced-folders/virtualbox.html" target="_blank" rel="noopener noreferrer">vboxsf 挂载文件系统<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，它需要在虚拟机内部安装客户机增强包，也就是 <code>VirtualBox Guest Additions</code>（输出信息中也提示了）。</p> <p>如何在虚机系统中安装 <code>guest additions</code> 要分操作系统而定，有点小坑，后面会细说，现在修改一下配置，明确指定同步类型是 <code>rsync</code>：</p> <div class="language-text extra-class"><pre class="language-text"><code>config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;, type: &quot;rsync&quot;
+</code></pre></div><p>这样表示仍然使用 <code>rsync</code> 来单向同步。</p> <h3 id="更改虚机规格"><a href="#更改虚机规格" class="header-anchor">#</a> 更改虚机规格</h3> <p>VirtualBox 等虚拟机软件在 Vagrant 中被称为 Provider，虚机的规格等配置是和 Provider 相关的。因为 VirtualBox 用的最多，所以默认的配置提示是以 VirtualBox 举例。</p> <p>如果想要了解其它 Provider 的配置，请参考 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/docs/providers/" target="_blank" rel="noopener noreferrer">文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>把中间那一段取消注释，其它的可以删掉：</p> <div class="language-text extra-class"><pre class="language-text"><code>  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+  # config.vm.provider &quot;virtualbox&quot; do |vb|
+  #   # Display the VirtualBox GUI when booting the machine
+  #   vb.gui = true
+  #
+  #   # Customize the amount of memory on the VM:
+  #   vb.memory = &quot;1024&quot;
+  # end
+  #
+  # View the documentation for the provider you are using for more
+  # information on available options.
+</code></pre></div><p>使用 VSCode 时，选中它们，然后按下快捷键 <code>Ctrl + /</code> 即可：</p> <div class="language-text extra-class"><pre class="language-text"><code>  config.vm.provider &quot;virtualbox&quot; do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = true
+
+    # Customize the amount of memory on the VM:
+    vb.memory = &quot;1024&quot;
+  end
+</code></pre></div><p><code>vb.gui = true</code> 是在虚机启动时自动打开 VirtualBox 的图形界面，这对服务器来说没什么用，直接删掉。</p> <p>添加 CPU 的配置，同时修改内存大小：</p> <div class="language-text extra-class"><pre class="language-text"><code>  config.vm.provider &quot;virtualbox&quot; do |vb|
+    vb.cpus = 2
+    vb.memory = 2048
+  end
+</code></pre></div><p>注意到，内存的大小单位是 MB，值是数字，默认的示例中有引号，实际也可以不加。</p> <p>特别提醒一下，在 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/docs/virtualbox/configuration.html" target="_blank" rel="noopener noreferrer">说明文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 里给的例子，其中的变量名是 <code>v</code>，这其实是在双竖线中定义的，直接拷贝的时候要看清楚。</p> <div class="language-text extra-class"><pre class="language-text"><code>config.vm.provider &quot;virtualbox&quot; do |v|
+  v.memory = 1024
+  v.cpus = 2
+end
+</code></pre></div><h3 id="provision"><a href="#provision" class="header-anchor">#</a> Provision</h3> <p>Provision 是指在虚机初次创建的时候，Vagrant 自动去执行的构造任务，比如安装软件，更新系统配置等。</p> <p>因为 box 往往只提供基础的系统（虽然我们可以自定义 box，但是并不是每次都要这么做，而且这样做会丧失一部分灵活性），有些东西仍然需要在创建虚机的时候完成。</p> <div class="language-text extra-class"><pre class="language-text"><code>  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  # config.vm.provision &quot;shell&quot;, inline: &amp;lt;&amp;lt;-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
+</code></pre></div><p>因为这部分完全是个开放的内容，所以我们这里不过多讨论，来看一下什么情况下会触发 provision 的操作：</p> <ul><li>某个环境初次执行 <code>vagrant up</code> 的时候</li> <li>执行 <code>vagrant provision</code> 命令</li> <li>重启的时候 <code>vagrant reload --provision</code>，带上 <code>--provision</code> 选项</li></ul> <p>除了上面这些默认提示给出的配置项，Vagrantfile 还支持其它很多配置，具体请 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/docs/vagrantfile/" target="_blank" rel="noopener noreferrer">查看文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>。</p> <p>由于 Vagrantfile 本身是 Ruby 脚本，所以它并不仅仅是静态的配置文件，而且可以包含程序逻辑，例如在 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/docs/multi-machine/" target="_blank" rel="noopener noreferrer">如何创建多个虚机<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 中就有应用，有兴趣的可以自行研究。</p> <h2 id="定制带客户机增强的-box"><a href="#定制带客户机增强的-box" class="header-anchor">#</a> 定制带客户机增强的 box</h2> <h3 id="下载-guest-addition"><a href="#下载-guest-addition" class="header-anchor">#</a> 下载 Guest Addition</h3> <p>VirtualBox 的<a href="https://link.zhihu.com/?target=https%3A//www.virtualbox.org/wiki/Downloads" target="_blank" rel="noopener noreferrer">下载页面<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>并没有直接给出 Guest Addtion 的下载链接，我们先在 VirtualBox 的任一下载链接上右键，复制链接地址，例如得到 <code>https://download.virtualbox.org/virtualbox/6.1.6/VirtualBox-6.1.6-137129-Win.exe</code>，去掉最后的文件名，把其中的路径 <code>https://download.virtualbox.org/virtualbox/6.1.6/</code> 在浏览器中打开，就能看到所有可下载的版本，在其中找到 <code>VBoxGuestAdditions_6.1.6.iso</code> 直接下载。</p> <h3 id="安装-guest-addition"><a href="#安装-guest-addition" class="header-anchor">#</a> 安装 Guest Addition</h3> <p>重新使用 Vagrant 从原始的镜像启动一个干净的虚机。</p> <p><code>VBoxGuestAdditions_6.1.6.iso</code> 需要以光盘的形式挂载到虚机上，但是默认启动的这个虚机是没有光驱的。添加虚拟光驱需要先将虚机关闭。</p> <p>然后在 VirtualBox 界面上操作，打开 <code>设置</code>，选择 <code>存储</code>，点击 <code>添加虚拟光驱</code>，点击 <code>控制器： IDE</code>，选择 <code>VBoxGuestAdditions_6.1.6.iso</code>，点击 <code>OK</code></p> <p>直接在 VirtualBox 上启动虚机，如果你在虚机菜单上选择 <code>设备</code> - <code>安装增强功能</code>，大概率是会遇到错误，别管它，我们手动来安装。</p> <p>使用 <code>vagrant/vagrant</code> 登录到虚机内，切换到 <code>root</code> 用户，查看虚拟光盘是否已经挂载上来了：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ sudo -i
+# lsblk
+NAME   MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda      8:0    0  40G  0 disk
+└─sda1   8:1    0  40G  0 part /
+sr0     11:0    1  57M  0 rom
+</code></pre></div><p>下面的 <code>sr0</code> 就是光盘设备，要把它挂载到文件系统中</p> <div class="language-text extra-class"><pre class="language-text"><code># mount /dev/sr0 /mnt/
+mount: /dev/sr0 is write-protected, mounting read-only
+# cd /mnt/
+# ls
+AUTORUN.INF  cert  OS2           TRANS.TBL                VBoxDarwinAdditionsUninstall.tool  VBoxSolarisAdditions.pkg        VBoxWindowsAdditions.exe
+autorun.sh   NT3x  runasroot.sh  VBoxDarwinAdditions.pkg  VBoxLinuxAdditions.run             VBoxWindowsAdditions-amd64.exe  VBoxWindowsAdditions-x86.exe
+</code></pre></div><p>在 Linux 系统中要运行 <code>VBoxLinuxAdditions.run</code>，这时候直接运行仍然会报错：</p> <p>大致意思是要它需要内核的头文件来构建。</p> <p>头文件通过安装 <code>kernel-devel</code> 就可以了，但是直接安装的版本是最新版本的，可能会当前的内核版本不一致，仍然是没用的。例如：</p> <div class="language-text extra-class"><pre class="language-text"><code>[root@localhost mnt]# uname -r
+3.10.0-1062.12.1.el7.x86_64
+[root@localhost mnt]# yum info kernel-devel
+Installed Packages
+Name        : kernel-devel
+Arch        : x86_64
+Version     : 3.10.0
+Release     : 1127.el7
+Size        : 38 M
+Repo        : installed
+From repo   : base
+</code></pre></div><p>这里 <code>kernel-devel</code> 的 <code>Release</code> 版本号和系统内核版本不一致，所以仍然不行。</p> <p>需要先更新一把，然后再安装（也可以先安装再更新）：</p> <div class="language-text extra-class"><pre class="language-text"><code># yum update -y
+# yum install -y gcc kernel-devel
+</code></pre></div><blockquote><p>这里选择的是更新到最新版本，如果你的开发环境需要特定的内核版本，你也可以根据情况安装指定的版本，只要<strong>保证内核版本和头文件版本完全匹配</strong>。</p> <p>Ubuntu 系统的安装方式有所不同，可以参考 <a href="https://link.zhihu.com/?target=https%3A//www.vagrantup.com/docs/virtualbox/boxes.html" target="_blank" rel="noopener noreferrer">Vagrant 的文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <p>升级内核后<strong>需要重启虚机</strong>，然后再次尝试重新挂载安装 Additions：</p> <div class="language-text extra-class"><pre class="language-text"><code>[root@localhost mnt]# ./VBoxLinuxAdditions.run
+Verifying archive integrity... All good.
+Uncompressing VirtualBox 6.1.6 Guest Additions for Linux........
+VirtualBox Guest Additions installer
+Removing installed version 6.1.6 of VirtualBox Guest Additions...
+Copying additional installer modules ...
+Installing additional modules ...
+VirtualBox Guest Additions: Starting.
+VirtualBox Guest Additions: Building the VirtualBox Guest Additions kernel
+modules.  This may take a while.
+VirtualBox Guest Additions: To build modules for other installed kernels, run
+VirtualBox Guest Additions:   /sbin/rcvboxadd quicksetup &amp;lt;version&gt;
+VirtualBox Guest Additions: or
+VirtualBox Guest Additions:   /sbin/rcvboxadd quicksetup all
+VirtualBox Guest Additions: Building the modules for kernel
+3.10.0-1127.el7.x86_64.
+VirtualBox Guest Additions: Running kernel modules will not be replaced until
+the system is restarted
+
+# 检查模块是否已经加载了
+[root@localhost mnt]# lsmod |grep vbox
+vboxvideo              35867  1
+ttm                    96673  1 vboxvideo
+drm_kms_helper        186531  1 vboxvideo
+drm                   456166  4 ttm,drm_kms_helper,vboxvideo
+vboxguest             349038  1
+[root@localhost mnt]#
+</code></pre></div><p>能够看到 <code>vboxguest</code> 就代表安装成功了。</p> <h3 id="测试"><a href="#测试" class="header-anchor">#</a> 测试</h3> <p>在 Vagrantfile 中添加同步文件夹设置，这次不再指定同步类型</p> <div class="language-text extra-class"><pre class="language-text"><code>config.vm.synced_folder &quot;../data&quot;, &quot;/vagrant_data&quot;
+</code></pre></div><p>然后执行 <code>vagrant reload</code></p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant reload
+...
+==&gt; default: Checking for guest additions in VM...
+==&gt; default: Rsyncing folder: /cygdrive/c/Users/Davy/demo/ =&gt; /vagrant
+==&gt; default: Mounting shared folders...
+    default: /vagrant_data =&gt; C:/Users/Davy/data
+==&gt; default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==&gt; default: flag to force provisioning. Provisioners marked to run always will still run.
+</code></pre></div><p>可以看到关于 additions 的提示信息没有了，新的同步文件夹也能正常同步了，这次的同步是双向的。我们可以先去同步文件夹随便创建一个文件：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant ssh
+Last login: Tue May  5 12:16:39 2020 from 10.0.2.2
+[vagrant@localhost ~]$ cd /vagrant_data/
+[vagrant@localhost vagrant_data]$ ls
+data.txt
+[vagrant@localhost vagrant_data]$ touch vm.txt   # 新建一个文件
+[vagrant@localhost vagrant_data]$ ls
+data.txt  vm.txt
+</code></pre></div><p>回到 Windows 宿主机上，<code>data</code> 文件夹下面也能看到 <code>vm.txt</code> 文件，</p> <div class="language-text extra-class"><pre class="language-text"><code>Davy@Davy-Desktop MINGW64 ~/data
+$ ls
+data.txt  vm.txt
+</code></pre></div><p>这样，我们的 Guest Addition 就安装成功了。</p> <h3 id="清理磁盘"><a href="#清理磁盘" class="header-anchor">#</a> 清理磁盘</h3> <p>接下来我们来把这个好不容易才装上了增强包的虚机保存为新的镜像。</p> <blockquote><p>这里你可能还想安装点其它软件，但是作为基础镜像，最好还是保持干净一点，不宜安装太多东西。后续可以在这个基础之上，再次构建其它特定的镜像。</p></blockquote> <p>为了使做出来的镜像文件大小紧凑点，我们把刚才安装过程中的缓存也删掉：</p> <div class="language-text extra-class"><pre class="language-text"><code>yum clean all
+</code></pre></div><p>我在打包过程中还遇到过 swapfile 占用磁盘空间的问题，导致镜像文件过大，可以这样检查：</p> <div class="language-text extra-class"><pre class="language-text"><code>du /swapfile   # 查看是否有占用
+swapoff -a     # 关闭 SWAP
+rm -f /swapfile
+</code></pre></div><p>使用 <code>df -h</code> 命令查看磁盘占用情况，像我这次操作，磁盘根目录不到 2GB 的空间占用：</p> <div class="language-text extra-class"><pre class="language-text"><code># df -h
+/dev/sda1        40G  1.5G   39G   4% /
+</code></pre></div><h3 id="打包为-box"><a href="#打包为-box" class="header-anchor">#</a> 打包为 box</h3> <p>执行 <code>vagrant package</code> 就可以把当前环境打包生成新的 box 文件：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant  package
+    ==&gt; default: Attempting graceful shutdown of VM...
+==&gt; default: Clearing any previously set forwarded ports...
+==&gt; default: Exporting VM...
+==&gt; default: Compressing package to: C:/Users/Davy/demo/package.box
+</code></pre></div><p>生成的文件就在 Dockerfile 所在的目录，文件名默认是 <code>package.box</code>。大小不到 600MB。</p> <p><strong>注意：</strong>，因为默认启动虚机时本地目录会 rsync 到虚机中，<code>package.box</code> 文件也会同步（拷贝）到虚机中，占用虚机磁盘。这时候如果二次执行打包，生成的文件大小会翻倍。</p> <h3 id="添加到-vagrant-中"><a href="#添加到-vagrant-中" class="header-anchor">#</a> 添加到 vagrant 中</h3> <p>继续使用下面的命令把新建的 box 添加到 vagrant 中：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant box add package.box --name davy/centos-7-base
+</code></pre></div><p>为了区分这是个人创建的基础镜像，加了个人用户名作为前缀，同时加了 <code>base</code> 后缀。</p> <p>添加成功后，本地的 <code>package.box</code> 就可以删除了。</p> <p>后续再创建虚机，使用下面的命令就可以了：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant init davy/centos-7-base
+</code></pre></div><h2 id="使用-ssh-客户端"><a href="#使用-ssh-客户端" class="header-anchor">#</a> 使用 SSH 客户端</h2> <p><code>vagrant ssh</code> 命令虽然很方便，但是在 Windows 环境下，因为默认的命令行终端不太好用，所以往往还需要使用更专业的 SSH 客户端例如 XShell 或 SecureCRT。</p> <p>默认的镜像只支持 private_key 的方式登录，<code>vagrant/vagrant</code> 可以在 VirtualBox 上登录系统，但是如果用来登录 SSH，会被拒绝。</p> <p>当然你可以在制作镜像的时候修改 ssh 服务的配置，让它能够用密码登录，但是实际上用密钥更加方便。</p> <p>先使用 <code>vagrant ssh-config</code> 命令可以看到 SSH 的配置：</p> <div class="language-text extra-class"><pre class="language-text"><code>$ vagrant ssh-config
+Host default
+  HostName 127.0.0.1
+  User vagrant
+  Port 22222
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile E:/VirtualBox/.vagrant.d/boxes/davy-VAGRANTSLASH-centos-7-base/0/virtualbox/vagrant_private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
+</code></pre></div><p>可以看到其中的 <code>IdentityFile</code> 就是私钥文件。</p> <p>发现这个自定义 box 启动的虚机的密钥文件是固定在 <code>VAGRANT_HOME</code> 下的相关目录下。那么就好办了，直接在 SSH 客户端软件上导入这个私钥文件就可以了。</p> <h2 id="使用模板文件"><a href="#使用模板文件" class="header-anchor">#</a> 使用模板文件</h2> <p><code>vagrant init</code> 命令只是用来生成 Vagrantfile 文件，但是默认的配置选项每次都要修改也很麻烦。该命令提供了 <code>--template</code> 选项，可以指定一个模板文件，我们可以在自定义自己的模板文件。</p> <p>这个模板文件的格式 <code>ERB</code> 是 <code>Ruby</code> 的模板语法，如果有 <code>Ruby on Rails</code> 开发经验的可能会比较熟悉。但是我们不用去学习这些细节。</p> <p>可以从 <a href="https://link.zhihu.com/?target=https%3A//github.com/hashicorp/vagrant/blob/master/templates/commands/init/Vagrantfile.erb" target="_blank" rel="noopener noreferrer">这里<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 拷贝一份原文件，还能在 Vagrant 的安装位置 <code>Vagrant\embedded\gems\2.2.7\gems\vagrant-2.2.7\templates\commands\init</code> 底下找到，并且有一个 <code>Vagrantfile.min.erb</code> 是去掉所有注释的：</p> <div class="language-text extra-class"><pre class="language-text"><code>Vagrant.configure(&quot;2&quot;) do |config|
+  config.vm.box = &quot;&amp;lt;%= box_name %&gt;&quot;
+  &amp;lt;% if box_version -%&gt;
+  config.vm.box_version = &quot;&amp;lt;%= box_version %&gt;&quot;
+  &amp;lt;% end -%&gt;
+  &amp;lt;% if box_url -%&gt;
+  config.vm.box_url = &quot;&amp;lt;%= box_url %&gt;&quot;
+  &amp;lt;% end -%&gt;
+end
+</code></pre></div><p>可以看到其中是怎么配置 <code>config.vm.box</code> 的。 像 <code>&lt;%</code> 这样的语法有兴趣可以自己去了解，这里我们只要把自己想要的配置项原样写上去就行了。</p> <p>下面是我按照自己的需要写的：</p> <div class="language-text extra-class"><pre class="language-text"><code>Vagrant.configure(&quot;2&quot;) do |config|
+  config.vm.box = &quot;&amp;lt;%= box_name %&gt;&quot;
+  config.vm.network &quot;forwarded_port&quot;, guest: 22, host: 2222, id: &quot;ssh&quot;, disabled: &quot;true&quot;
+  config.vm.network &quot;forwarded_port&quot;, guest: 22, host: 22222
+
+  # config.vm.network &quot;private_network&quot;, ip: &quot;192.168.56.10&quot;
+  # config.vm.synced_folder &quot;../data&quot;, &quot;/data&quot;
+
+  config.vm.provider &quot;virtualbox&quot; do |vb|
+    # vb.name = &quot;give me a better name&quot;
+    vb.memory = &quot;1024&quot;
+  end
+end
+</code></pre></div><blockquote><p>不要有中文，不然会遇到编码的麻烦。</p></blockquote> <p>其中像私有网络和同步文件夹配置，几乎每次基本都要，但是又不好固定，所以仍然以注释的形式保留，每次稍微改一下也很方便。</p> <p>把这个文件找个目录，保存为 <code>vagrant.erb</code>。</p> <p>接着在使用 <code>vagrant init</code> 的时候通过 <code>--tempate</code> 指定它就可以了，例如：</p> <div class="language-text extra-class"><pre class="language-text"><code>vagrant init davy/centos-7-base --tempate &quot;C:\Users\Davy\vagrant.erb&quot;
+</code></pre></div><p>显然，每次要记住并且输入这个模板文件也很麻烦的。可以通过设置环境变量 <code>VAGRANT_DEFAULT_TEMPLATE</code> 来一劳永逸地解决这个问题。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/personal_wiki/assets/js/app.d60e7411.js" defer></script><script src="/personal_wiki/assets/js/2.487a0e24.js" defer></script><script src="/personal_wiki/assets/js/20.f2217f22.js" defer></script>
+  </body>
+</html>
